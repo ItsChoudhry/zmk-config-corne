@@ -22,16 +22,10 @@
   delay-ms = <0>;
 };
 
-behaviors {
-  hm: homerow_mods {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOMEROW_MODS";
-    #binding-cells = <2>;
-    tapping-term-ms = <150>;
-    quick-tap-ms = <0>;
-    flavor = "tap-preferred";
-    bindings = <&kp>, <&kp>;
-  };
+&mt {
+  tapping-term-ms = <150>;
+  quick-tap-ms = <0>;
+  flavor = "tap-preferred";
 };
 
 / {
@@ -54,7 +48,7 @@ behaviors {
 //                    | TAB | LWR | SPC |   | ENT | RSE  | BKSP|
                         bindings = <
    &kp EQUAL &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp PLUS
-   &kp ESC   &hm LGUI A &hm LALT S &hm LSHFT D &hm LCTRL F &kp G   &kp H &hm RCTRL J  &hm RSHFT K     &hm RALT L   &hm RGUI SEMI &kp SQT
+   &kp ESC   &mt LGUI A &mt LALT S &mt LSHFT D &mt LCTRL F &kp G   &kp H &mt RCTRL J  &mt RSHFT K     &mt RALT L   &mt RGUI SEMI &kp SQT
    &kp MINUS &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp UNDER
                   &kp TAB &mo 1 &kp SPACE   &kp RET &mo 2 &kp BSPC
                         >;
@@ -67,7 +61,7 @@ behaviors {
 //                    | TAB |     | SPC |   | ENT |     | BKSP |
                         bindings = <
    &kp LBKT   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp RBKT
-   &kp DEL &trans  &trans  &trans   &trans  &kp BSLH   &kp LEFT &hm RCTRL DOWN &hm RSHFT UP &hm RALT RIGHT &trans &kp GRAVE
+   &kp DEL &trans  &trans  &trans   &trans  &kp BSLH   &kp LEFT &mt RCTRL DOWN &mt RSHFT UP &mt RALT RIGHT &trans &kp GRAVE
    &kp LBRC  &trans   &trans &trans   &trans   &trans     &trans   &trans   &trans &trans    &trans &kp RBRC
                                     &kp TAB     &trans       &kp SPACE      &kp RET  &trans   &kp BSPC
                         >;
