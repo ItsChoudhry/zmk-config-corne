@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: corne}
 layers:
-  default: [TAB, Q, W, E, R, T, Y, U, I, O, P, ESC, LCTRL, A, S, D, F, G, H, J, K, L, ;, LGUI, LSHFT, Z, X, C, V, B, N, M, ',', ., /, DEL, LALT, lower, SPACE, RET,
+  default: [TAB, Q, W, E, R, T, Y, U, I, O, P, ESC, LCTRL, A, S, D, F, G, H, J, K, L, "'", LGUI, LSHFT, Z, X, C, V, B, N, M, ',', ., /, DEL, LALT, lower, SPACE, RET,
     raise, BSPC]
   lower:
   - DEL
