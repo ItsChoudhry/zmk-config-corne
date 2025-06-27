@@ -133,17 +133,17 @@
             layers = <0>;
         };
 
-        less_than {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <2 3>; // we
-            layers = <0>;
-        };
+//        less_than {
+//            bindings = <&kp LESS_THAN>;
+//            key-positions = <2 3>; // we
+//            layers = <0>;
+//        };
 
-        bigger_than {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <8 9>; // io
-            layers = <0>;
-        };
+//        bigger_than {
+//            bindings = <&kp GREATER_THAN>;
+//            key-positions = <8 9>; // io
+//            layers = <0>;
+//       };
 
         Pipe {
             bindings = <&kp PIPE>;
