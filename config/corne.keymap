@@ -123,13 +123,13 @@
 
        sqt {
            bindings = <&kp SINGLE_QUOTE>;
-           key-positions = <28 29>; // vb
+           key-positions = <16 17>; // fg
            layers = <0>;
        };
 
        dqt {
            bindings = <&kp DOUBLE_QUOTES>;
-           key-positions = <30 31>; // nm
+           key-positions = <18 19>; // hj
            layers = <0>;
        };
 
