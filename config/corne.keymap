@@ -34,16 +34,6 @@
 
 
 / {
-    behaviors {
-      skq: sticky_key_quick_release {
-        compatible = "zmk,behavior-sticky-key";
-        #binding-cells = <1>;
-        bindings = <&kp>;
-        release-after-ms = <1000>;
-        quick-release;
-        ignore-modifiers;
-      };
-
     combos {
         compatible = "zmk,combos";
         /* cpslck { */
