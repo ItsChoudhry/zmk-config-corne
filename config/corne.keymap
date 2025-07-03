@@ -43,7 +43,7 @@
         quick-release;
         ignore-modifiers;
       };
-    };
+
     combos {
         compatible = "zmk,combos";
         /* cpslck { */
