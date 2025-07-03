@@ -121,17 +121,17 @@
         /*     layers = <0>; */
         /* }; */
 
-       sqt {
-           bindings = <&kp SINGLE_QUOTE>;
-           key-positions = <16 17>; // fg
-           layers = <0>;
-       };
-
-       dqt {
-           bindings = <&kp DOUBLE_QUOTES>;
-           key-positions = <18 19>; // hj
-           layers = <0>;
-       };
+       /* sqt { */
+       /*     bindings = <&kp SINGLE_QUOTE>; */
+       /*     key-positions = <16 17>; // fg */
+       /*     layers = <0>; */
+       /* }; */
+       /**/
+       /* dqt { */
+       /*     bindings = <&kp DOUBLE_QUOTES>; */
+       /*     key-positions = <18 19>; // hj */
+       /*     layers = <0>; */
+       /* }; */
 
         grave {
             bindings = <&kp GRAVE>;
@@ -198,12 +198,12 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ESC  |
-// | ctrl |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  | met  |
+// | ctrl |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  |  '   |
 // | shft |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | DEL  |
 //                    | ALT | LWR |SPC  |   | ENT | RSE  | BKSP|              
                         bindings = <                                          
    &kp TAB &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &kp ESC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K  &kp L   &kp SEMI  &kp LGUI
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K  &kp L   &kp SEMI  &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp DEL
                   &kp LALT &mo 1 &kp SPACE   &kp RET &mo 2 &kp BSPC
                         >;
@@ -211,12 +211,12 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | del  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  "   |
-// | ctrl |  |  |  [  | {   |  (  |  _  |   | LFT | DWN |  UP | RGT |  ~  |  '   |
+// | ctrl |  |  |  [  | {   |  (  |  _  |   | LFT | DWN |  UP | RGT |  ~  | met  |
 // | shft |  \  |  ]  | }   |  )  |  -  |   |  +  |  /  |   * |  =  |     |  `   |
 //                    | ALT |     | SPC |   | ENT |     | BKSP |
                         bindings = <
    &kp DEL   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DQT
-   &kp LCTRL &kp PIPE  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TILDE &kp SQT
+   &kp LCTRL &kp PIPE  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp TILDE &kp LGUI
    &kp LSHFT  &kp BACKSLASH   &kp RIGHT_BRACKET &kp RIGHT_BRACE   &kp RIGHT_PARENTHESIS   &kp MINUS     &kp PLUS   &kp FSLH   &kp STAR &kp EQUAL &trans &kp GRAVE
                                     &kp LALT     &trans       &kp SPACE      &kp RET  &trans   &kp BSPC
                         >;
