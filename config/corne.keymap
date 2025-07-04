@@ -171,13 +171,13 @@
 
 
         Pipe {
-            bindings = <&kp PIPE>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <15 14>; // sd
             layers = <0>;
         };
 
         backslash {
-            bindings = <&kp BACKSLASH>;
+            bindings = <&kp PIPE>;
             key-positions = <27 26>; // xc
             layers = <0>;
         };
