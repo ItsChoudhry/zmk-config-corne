@@ -63,7 +63,7 @@
               tapping-term-ms = <130>;
               quick-tap-ms = <120>;
               retro-tap;
-              bindings = <&kp &kp>;
+              bindings = <&mo &kp>;
             };
           };
         conditional_layers {
