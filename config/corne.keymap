@@ -39,24 +39,31 @@
     retro-tap;
 };
 
-&hrm {
-  compatible = "zmk,behavior-hold-tap";
-  #binding-cells = <2>;           // <mod key>
-  flavor = "hold-preferred";      // favors modifier when rolling into next key
-  tapping-term-ms = <200>;        // room for clean letters
-  quick-tap-ms = <120>;           // fast repeats still register as taps
-  retro-tap;
-};
-
-&lt_fast {
-  compatible = "zmk,behavior-hold-tap";
-  #binding-cells = <2>;
-  flavor = "tap-preferred";
-  tapping-term-ms = <130>;        // snappy for thumb LTs (Space/Bspc)
-  quick-tap-ms = <120>;
-  retro-tap;
-};
 / {
+
+        behaviors {
+            /* Home-row mod behavior (new node labeled "hrm") */
+            hrm: hrm {
+              compatible = "zmk,behavior-hold-tap";
+              label = "HRM";
+              #binding-cells = <2>;           // <mod key>
+              flavor = "hold-preferred";      // favors modifier when rolling
+              tapping-term-ms = <200>;
+              quick-tap-ms = <120>;
+              retro-tap;
+            };
+        
+            /* Fast LT for thumbs (new node labeled "lt_fast") */
+            lt_fast: lt_fast {
+              compatible = "zmk,behavior-hold-tap";
+              label = "LT_FAST";
+              #binding-cells = <2>;
+              flavor = "tap-preferred";
+              tapping-term-ms = <130>;
+              quick-tap-ms = <120>;
+              retro-tap;
+            };
+          };
         conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
