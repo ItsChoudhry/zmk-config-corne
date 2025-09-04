@@ -81,12 +81,12 @@
 // ----------------------------------------------------------------------------------------
 // | past |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | undo |
 // | copy | sA  |  cS |  aD |  gF |  G  |   |  H  |  gJ  | aK  |  cL |  s; |  '   |
-// | cut  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |      |
+// | cut  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | caps |
 //                    | ESC | 1SPC | TAB  |   | BSPC |  2ENT  | DEL |              
                         bindings = <                                          
    &kp LG(V) &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &kp LG(Z)
    &kp LG(C) &hrm LSHFT A &hrm LCTRL S &hrm LALT D &hrm LGUI F &kp G   &kp H &hrm RGUI J  &hrm RALT K  &hrm RCTRL L   &hrm RSHFT SEMI  &kp SQT
-   &kp LG(X) &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &trans
+   &kp LG(X) &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &caps_word
                   &kp ESC  &lt_fast 1 SPACE &kp TAB    &kp BSPC &lt_fast 2 RET &kp DEL
                         >;
                 };
@@ -109,14 +109,14 @@
 // |      |  .  |  $  |  `  |  -  |  /  |   |  *  |  #  |  [  |  ]  |  ,  |      |
 // |  <   |  %  |  &  |  "  |  ~  | "|" |   |  !  |  =  |  (  |  )  |  ^  |  >   |
 // |      |  :  |  ?  |  '  |  _  |  \  |   |  @  |  +  |  {  |  }  |  ;  |      |
-//                |LSHFT | LCRTL | CAPS |   |      |      |      |
+//                   |LSHFT |     |LCRTL|   |LALT  |      |      |
 // -----------------------------------------------------------------------------------------
     bindings = <
   &trans   &kp DOT    &kp DLLR   &kp GRAVE   &kp MINUS   &kp FSLH        &kp STAR   &kp HASH   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp COMMA   &trans
   &kp LT   &kp PRCNT  &kp AMPS    &kp DQT     &kp TILDE  &kp PIPE        &kp EXCL   &kp EQUAL  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp CARET &kp GT
   &trans   &kp COLON  &kp QMARK  &kp SQT     &kp UNDERSCORE &kp BSLH      &kp AT     &kp PLUS   &kp LEFT_BRACE     &kp RIGHT_BRACE     &kp SEMI   &trans
 
-           &sk LSHFT &sk LCTRL &sk LALT      &caps_word  &trans &trans
+           &sk LSHFT &trans &sk LCTRL        &sk LALT  &trans &trans
     >;
 };
 
