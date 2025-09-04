@@ -49,11 +49,11 @@
               compatible = "zmk,behavior-hold-tap";
               label = "HRM";
               #binding-cells = <2>;           // <hold_mod tap_key>
-              flavor = "hold-preferred";
-              tapping-term-ms = <200>;
-              quick-tap-ms = <120>;
+              flavor = "balanced";
+              tapping-term-ms = <190>;
+              quick-tap-ms = <150>;
               retro-tap;
-              bindings = <&kp &kp>;           // hold uses &kp (for the mod), tap uses &kp (for the letter)
+              bindings = <&kp &kp>; 
             };
         };
             
