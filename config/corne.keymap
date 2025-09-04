@@ -23,8 +23,9 @@
 };
 
 &mt {
-  tapping-term-ms = <200>;
+  tapping-term-ms = <150>;
   flavor = "tap-preferred";
+  retro-tap;
 };
 
 &sk {
@@ -34,7 +35,8 @@
 &lt {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
+    retro-tap;
 };
 
 / {
@@ -64,15 +66,15 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// | ctrl |  |  |  [  | {   |  (  |  -  |   | LFT | DWN |  UP | RGT |     |  "   |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  |   |
+// | ctrl |     |  [  | {   |  (  |  -  |   | LFT | DWN |  UP | RGT |     |  "   |
 // | shft |     |  ]  | }   |  )  |  _  |   |  +  |  =  |   * |  /  |     |  `   |
-//                    | ALT |     | SPC |   | ENT |     | BKSP |
+//                    | ALT |     |     |   |     |     | BKSP |
                         bindings = <
-   &trans   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &kp LCTRL &kp PIPE  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp MINUS &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp DQT
+   &trans   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp PIPE
+   &kp LCTRL &trans  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp MINUS &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp DQT
    &kp LSHFT  &trans   &kp RIGHT_BRACKET &kp RIGHT_BRACE   &kp RIGHT_PARENTHESIS   &kp UNDERSCORE  &kp PLUS   &kp EQUAL &kp STAR &kp FSLH &trans &kp GRAVE
-                                    &kp LALT     &trans       &kp SPACE      &kp RET  &trans   &kp BSPC
+                                    &kp LALT     &trans       &trans      &trans  &trans   &kp BSPC
                         >;
                 };
 
@@ -92,15 +94,15 @@
 
                 tri_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |  DEL |
-// | CTRL | F11 | F12 |     | LCKL| RCKL|   |m_lft|m_dn |m_up |m_rgt|     |  GUI |
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
+// | CTRL | F11 | F12 |     | LCKL| RCKL|   |m_lft|m_dn |m_up |m_rgt|     |      |
 // | SHFT |BTCLR|     |     | s_dn| s_up|   | BT1 | BT2 | BT3 | BT4 | BT5 | prnt |
-//                    | ALT |     | SPC |   | ENT |     |BKSP |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp TAB  &kp F1   &kp F2 &kp F3   &kp F4   &kp F5       &kp F6   &kp F7 &kp F8   &kp F9   &kp F10 &kp DEL
-   &kp LCTRL &kp F11   &kp F12 &trans   &mkp LCLK   &mkp RCLK                      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &trans   &sk LGUI
+   &trans  &kp F1   &kp F2 &kp F3   &kp F4   &kp F5       &kp F6   &kp F7 &kp F8   &kp F9   &kp F10 &trans
+   &kp LCTRL &kp F11   &kp F12 &trans   &mkp LCLK   &mkp RCLK                      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &trans   &trans
    &kp LSHFT &bt BT_CLR   &trans  &trans  &msc MOVE_UP    &msc MOVE_DOWN       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN
-                             &kp LALT &trans   &kp SPACE   &kp RET   &trans    &kp BSPC
+                             &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
         };
