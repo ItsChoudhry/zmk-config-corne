@@ -42,26 +42,28 @@
 / {
 
         behaviors {
-            /* Home-row mod behavior (new node labeled "hrm") */
+            /* Home-row mod behavior */
             hrm: hrm {
               compatible = "zmk,behavior-hold-tap";
               label = "HRM";
-              #binding-cells = <2>;           // <mod key>
-              flavor = "hold-preferred";      // favors modifier when rolling
+              #binding-cells = <2>;           // <hold_mod tap_key>
+              flavor = "hold-preferred";
               tapping-term-ms = <200>;
               quick-tap-ms = <120>;
               retro-tap;
+              bindings = <&kp &kp>;           // hold uses &kp (for the mod), tap uses &kp (for the letter)
             };
         
-            /* Fast LT for thumbs (new node labeled "lt_fast") */
+            /* Fast LT for thumbs */
             lt_fast: lt_fast {
               compatible = "zmk,behavior-hold-tap";
               label = "LT_FAST";
-              #binding-cells = <2>;
+              #binding-cells = <2>;           // <layer tap_key>
               flavor = "tap-preferred";
               tapping-term-ms = <130>;
               quick-tap-ms = <120>;
               retro-tap;
+              bindings = <&kp &kp>;
             };
           };
         conditional_layers {
