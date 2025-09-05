@@ -12,14 +12,14 @@
 
 &mmv {
   acceleration-exponent = <2>;
-  time-to-max-speed-ms = <200>;
+  time-to-max-speed-ms = <150>;
   delay-ms = <0>;
 };
 
 &msc {
   acceleration-exponent = <1>;
   time-to-max-speed-ms = <300>;
-  delay-ms = <30>;
+  delay-ms = <0>;
 };
 
 &mt {
@@ -75,43 +75,42 @@
 // | past |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | undo |
 // | cut  | sA  |  cS |  aD |  gF |  G  |   |  H  |  gJ  | aK  |  cL |  s; |  '   |
 // | copy |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | caps |
-//                    | ESC | TAB | 2SPC|   | 1ENT | BSPC  | DEL |              
+//                    | ESC | 1TAB| SPC |   | ENT | 2BSPC  | DEL |              
                         bindings = <                                          
    &kp LG(V) &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &kp LG(Z)
    &kp LG(X) &hrm LSHFT A &hrm LCTRL S &hrm LALT D &hrm LGUI F &kp G   &kp H &hrm RGUI J  &hrm RALT K  &hrm RCTRL L   &hrm RSHFT SEMI  &kp SQT
    &kp LG(C) &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &caps_word
-                  &kp ESC &kp TAB &lt 2 SPACE   &lt 1 RET &kp BSPC &kp DEL
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
-// |      |     |     |     |     |     |   | HOME| PGDN| PGUP|  END|     |      |
-//                    |     |     |     |   |  cb |     |  cd  |
-                        bindings = <
-   &trans   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &trans &trans   &trans   &trans  &trans  &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT &trans &trans
-   &trans &trans &trans  &trans   &trans   &trans  &kp HOME   &kp PG_DN   &kp PG_UP   &kp END &trans &trans
-                                    &trans     &trans       &trans      &kp LC(BSPC)  &trans   &kp LC(DEL)
+                  &kp ESC &lt 1 TAB  &kp SPACE  &kp RET &lt 2  BSPC &kp DEL
                         >;
                 };
 
-                  raise_layer {
+                  lower_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  .  |  $  |  `  |  -  |  /  |   |  *  |  #  |  [  |  ]  |  ,  |      |
 // |  <   |  %  |  !  |  "  |  ~  | "|" |   |  &  |  =  |  (  |  )  |  ^  |  >   |
 // |      |  :  |  ?  |  '  |  _  |  \  |   |  @  |  +  |  {  |  }  |  ;  |      |
-//                   |LSHFT |     |LCRTL|   |LALT  |      |      |
+//                   |      |     |     |   |     |     |     |   
 // -----------------------------------------------------------------------------------------
     bindings = <
   &trans   &kp DOT    &kp DLLR   &kp GRAVE   &kp MINUS   &kp FSLH        &kp STAR   &kp HASH   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp COMMA   &trans
   &kp LT   &kp PRCNT  &kp EXCL    &kp DQT     &kp TILDE  &kp PIPE        &kp AMPS  &kp EQUAL  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp CARET &kp GT
   &trans   &kp COLON  &kp QMARK  &kp SQT     &kp UNDERSCORE &kp BSLH      &kp AT     &kp PLUS   &kp LEFT_BRACE     &kp RIGHT_BRACE     &kp SEMI   &trans
-
-           &sk LSHFT &trans &sk LCTRL        &sk LALT  &trans &trans
+             &trans   &trans   &trans       &trans  &trans &trans
     >;
 };
+                raise_layer {
+// -----------------------------------------------------------------------------------------
+// |alt   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// |ctrl  |     |     |     |     |     |   | PGU | HME |  UP | END |     |      |
+// |shft  |     |     |     |     |     |   | PGD | LFT | DWM | RGHT|     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &sk LALT   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &sk LCTRL &trans &trans   &trans   &trans  &trans  &kp PG_UP   &kp HOME    &kp UP      &kp END &trans &trans
+   &sk LSHFT &trans &trans  &trans   &trans   &trans  &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT &trans &trans
+                                    &trans     &trans       &trans      &trans  &trans   &trans
+                        >;
+                };
 
                 tri_layer {
 // -----------------------------------------------------------------------------------------
