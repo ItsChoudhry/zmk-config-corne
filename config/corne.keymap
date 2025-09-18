@@ -97,14 +97,14 @@
 // -----------------------------------------------------------------------------------------
 // |      |  .  |  $  |  `  |  -  |  /  |   |  *  |  #  |  [  |  ]  |  ,  |      |
 // |  <   |  %  |  !  |  "  |  ~  | "|" |   |  &  |  =  |  (  |  )  |  ^  |  >   |
-// |      |  :  |  ?  |  '  |  _  |  \  |   |  @  |  +  |  {  |  }  |  ;  |      |
-//                   |      |     |     |   |     |     |     |   
+// |  sh  |  :  |  ?  |  '  |  _  |  \  |   |  @  |  +  |  {  |  }  |  ;  |      |
+//                   | alt  |     | cr  |   |     |     |     |   
 // -----------------------------------------------------------------------------------------
     bindings = <
   &trans   &kp DOT    &kp DLLR   &kp GRAVE   &kp MINUS   &kp FSLH        &kp STAR   &kp HASH   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp COMMA   &trans
   &kp LT   &kp PRCNT  &kp EXCL    &kp DQT     &kp TILDE  &kp PIPE        &kp AMPS  &kp EQUAL  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp CARET &kp GT
-  &trans   &kp COLON  &kp QMARK  &kp SQT     &kp UNDERSCORE &kp BSLH      &kp AT     &kp PLUS   &kp LEFT_BRACE     &kp RIGHT_BRACE     &kp SEMI   &trans
-             &trans   &trans   &trans       &trans  &trans &trans
+  &sk LSHFT   &kp COLON  &kp QMARK  &kp SQT     &kp UNDERSCORE &kp BSLH      &kp AT     &kp PLUS   &kp LEFT_BRACE     &kp RIGHT_BRACE     &kp SEMI   &trans
+             &sk LALT   &trans   &sk LCTRL       &trans  &trans &trans
     >;
 };
                 raise_layer {
