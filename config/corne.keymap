@@ -50,7 +50,7 @@
               label = "HRM";
               #binding-cells = <2>;           // <hold_mod tap_key>
               flavor = "balanced";
-              tapping-term-ms = <18>;
+              tapping-term-ms = <185>;
               quick-tap-ms = <150>;
               retro-tap;
               bindings = <&kp &kp>; 
