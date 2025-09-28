@@ -52,7 +52,7 @@
               flavor = "balanced";
               tapping-term-ms = <185>;
               quick-tap-ms = <150>;
-              global = true;
+              global;
               retro-tap;
               bindings = <&kp>, <&kp>; 
             };
