@@ -52,9 +52,8 @@
               flavor = "balanced";
               tapping-term-ms = <185>;
               quick-tap-ms = <150>;
-              global;
               retro-tap;
-              bindings = <&kp>, <&kp>; 
+              bindings = <&kp &kp>; 
             };
             ht: ht {
               compatible = "zmk,behavior-hold-tap";
