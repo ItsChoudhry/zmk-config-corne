@@ -63,7 +63,7 @@
               flavor = "tap-preferred"; // tap wins unless you truly hold
               tapping-term-ms = <190>;
               quick-tap-ms = <150>;
-              bindings = <&kp &kp>;
+              bindings = <&kp>, <&kp>;
           };        
         };
             
