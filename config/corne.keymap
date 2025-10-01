@@ -71,7 +71,7 @@
                   key-positions = <30 35>;
       
                   // Sticky Layer: enter on first chord, exit on the same chord again.
-                  bindings = <&sl COLEMAK_DH_ANSI>;
+                  bindings = <&sl 5>;
               };
       
               // (Optional) Restrict the chord to only work from BASE (uncomment next line if desired)
@@ -159,6 +159,7 @@
                          &trans   &trans    &trans         &kp DOT  &trans   &kp N0
                         >;
                 };      
+
                 COLEMAK_DH_ANSI {
 // ----------------------------------------------------------------------------------------
 // |paste |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | undo |
