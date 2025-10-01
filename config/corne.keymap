@@ -65,7 +65,26 @@
               bindings = <&kp &kp>;
           };        
         };
-            
+
+       combos {
+              compatible = "zmk,combos";
+      
+              // Press Esc + Del together → toggle Colemak-DH ANSI layer on/off (sticky layer).
+              combo_toggle_colemak_dh_ansi {
+                  timeout-ms = <60>;
+      
+                  // IMPORTANT: Replace these with your actual key positions for ESC and DEL on BASE.
+                  // If you use the BASE example above, the indices are:
+                  // Row1: 0..9, Row2: 10..19, Row3: 20..29, Row4: ESC(30) _  TAB(32) SPACE(33) RET(34) DEL(35) _ _
+                  key-positions = <30 35>;
+      
+                  // Sticky Layer: enter on first chord, exit on the same chord again.
+                  bindings = <&sl COLEMAK_DH_ANSI>;
+              };
+      
+              // (Optional) Restrict the chord to only work from BASE (uncomment next line if desired)
+              // layers = <&base_layer>;
+       };
 
               
         conditional_layers {
@@ -148,6 +167,19 @@
                          &trans   &trans    &trans         &kp DOT  &trans   &kp N0
                         >;
                 };      
+                COLEMAK_DH_ANSI {
+// ----------------------------------------------------------------------------------------
+// |paste |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | undo |
+// | cut  | sA  |  cR |  aS |  gT |  G  |   |  M  |  gN  | aE  |  cI |  sO |  '   |
+// | copy |  X  |  C  |  D  |  V  |  Z  |   |  K  |  H   |  ,  |  .  |  /  | caps |
+//                    |     |     |     |   |     |      |     |                   
+                        bindings = <                                          
+   &kp LG(V) &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U  &kp Y   &kp SEMI   &kp LG(Z)
+   &kp LG(X) &hrm LSHFT A &hrm LCTRL R &hrm LALT S &hrm LGUI T &kp G   &kp M &hrm RGUI N  &hrm RALT E  &hrm RCTRL I &hrm RSHFT O &kp SQT
+   &kp LG(C) &kp X &kp C &kp D &kp V &kp Z   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &caps_word
+                  &trans &trans &trans   &trans &trans &trans
+                        >;
+                };
   };
 };
 
