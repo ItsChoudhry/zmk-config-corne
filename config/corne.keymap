@@ -61,14 +61,21 @@
        combos {
               compatible = "zmk,combos";
       
-              combo_toggle_colemak_dh_ansi {
-                  timeout-ms = <60>;
-                  key-positions = <5 6>;
-                  bindings = <&tog 5>;
+              // When you're on base 0 (QWERTY), this chord switches you to 5 (Colemak)
+              combo_to_colemak {
+                timeout-ms = <60>;
+                key-positions = <5 6>;
+                bindings = <&to 5>;
+                layers = <0>;
               };
-      
-              // (Optional) Restrict the chord to only work from BASE (uncomment next line if desired)
-              // layers = <&base_layer>;
+            
+              // When you're on base 5 (Colemak), the *same* chord switches you back to 0
+              combo_to_qwerty {
+                timeout-ms = <60>;
+                key-positions = <5 6>;
+                bindings = <&to 0>;
+                layers = <5>;
+              };
        };
 
               
