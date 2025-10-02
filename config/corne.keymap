@@ -158,12 +158,12 @@
 // |paste |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | undo |
 // | cut  | sA  |  cR |  aS |  gT |  G  |   |  M  |  gN  | aE  |  cI |  sO |  '   |
 // | copy |  X  |  C  |  D  |  V  |  Z  |   |  K  |  H   |  ,  |  .  |  /  | caps |
-//                    |     |     |     |   |     |      |     |                   
+//                    |nESC | SPC |1TAB |   | 2RET | BSPC  | DEL |                    
                         bindings = <                                          
    &kp LG(V) &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U  &kp Y   &kp SEMI   &kp LG(Z)
    &kp LG(X) &hrm LSHFT A &hrm LCTRL R &hrm LALT S &hrm LGUI T &kp G   &kp M &hrm RGUI N  &hrm RALT E  &hrm RCTRL I &hrm RSHFT O &kp SQT
    &kp LG(C) &kp X &kp C &kp D &kp V &kp Z   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &caps_word
-                  &trans &trans &trans   &trans &trans &trans
+                  &lt 4 ESC &kp SPACE &lt 1 TAB   &lt 2 RET &kp BSPC &kp DEL
                         >;
                 };
   };
