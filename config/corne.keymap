@@ -39,10 +39,10 @@
             /* Home-row mod behavior */
             hrm: hrm {
               compatible = "zmk,behavior-hold-tap";
-              label = "HRM";
-              #binding-cells = <2>;           // <hold_mod tap_key>
-              flavor = "balanced";
-              tapping-term-ms = <185>;
+              #binding-cells = <2>;
+              flavor = "tap-unless-interrupted";
+              tapping-term-ms = <180>;
+              require-prior-idle-ms = <100>;
               quick-tap-ms = <0>;
               retro-tap;
               bindings = <&kp &kp>; 
