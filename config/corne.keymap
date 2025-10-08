@@ -48,6 +48,7 @@
               hold-trigger-on-release;
               bindings = <&kp &kp>; 
             };
+
             lt_mod: lt_mod {
               compatible = "zmk,behavior-hold-tap";
               label = "LT_SAFE";
@@ -59,6 +60,7 @@
               hold-trigger-on-release;       // ← keeps layer active through the symbol’s release
               bindings = <&mo &kp>;          // same as default LT
             };
+        };
 
        combos {
               compatible = "zmk,combos";
