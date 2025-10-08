@@ -40,9 +40,10 @@
             hrm: hrm {
               compatible = "zmk,behavior-hold-tap";
               #binding-cells = <2>;
-              flavor = "tap-unless-interrupted";
+              flavor = "balanced";
               tapping-term-ms = <185>;
               quick-tap-ms = <0>;
+              hold-while-undecided;
               retro-tap;
               bindings = <&kp &kp>; 
             };
