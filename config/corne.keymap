@@ -43,7 +43,6 @@
               flavor = "balanced";
               tapping-term-ms = <185>;
               quick-tap-ms = <0>;
-              hold-while-undecided;
               retro-tap;
               bindings = <&kp &kp>; 
             };
