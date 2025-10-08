@@ -45,7 +45,6 @@
               tapping-term-ms = <185>;
               quick-tap-ms = <0>;
               retro-tap;
-              hold-trigger-on-release;
               bindings = <&kp &kp>; 
             };
 
@@ -57,7 +56,6 @@
               tapping-term-ms = <185>;       // keep your current feel
               quick-tap-ms = <0>;            // avoid early tap bias
               retro-tap;                     // optional but nice
-              hold-trigger-on-release;       // ← keeps layer active through the symbol’s release
               bindings = <&mo &kp>;          // same as default LT
             };
         };
