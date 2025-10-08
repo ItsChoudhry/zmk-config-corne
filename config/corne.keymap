@@ -41,11 +41,10 @@
               compatible = "zmk,behavior-hold-tap";
               label = "HRM";
               #binding-cells = <2>;           // <hold_mod tap_key>
-              flavor = "balanced";
+              flavor = "tap-unless-interrupted";
               tapping-term-ms = <185>;
               quick-tap-ms = <0>;
               retro-tap;
-              hold-trigger-on-release;
               bindings = <&kp &kp>; 
             };
 
