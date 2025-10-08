@@ -43,20 +43,22 @@
               #binding-cells = <2>;           // <hold_mod tap_key>
               flavor = "balanced";
               tapping-term-ms = <185>;
-              quick-tap-ms = <150>;
+              quick-tap-ms = <0>;
               retro-tap;
+              hold-trigger-on-release;
               bindings = <&kp &kp>; 
             };
-            ht: ht {
+            lt_mod: lt_mod {
               compatible = "zmk,behavior-hold-tap";
-              label = "HT";
-              #binding-cells = <2>;     // <HOLD_key TAP_key>
-              flavor = "tap-preferred"; // tap wins unless you truly hold
-              tapping-term-ms = <190>;
-              quick-tap-ms = <150>;
-              bindings = <&kp &kp>;
-          };        
-        };
+              label = "LT_SAFE";
+              #binding-cells = <2>;          // <layer tap_key>
+              flavor = "balanced";
+              tapping-term-ms = <185>;       // keep your current feel
+              quick-tap-ms = <0>;            // avoid early tap bias
+              retro-tap;                     // optional but nice
+              hold-trigger-on-release;       // ← keeps layer active through the symbol’s release
+              bindings = <&mo &kp>;          // same as default LT
+            };
 
        combos {
               compatible = "zmk,combos";
@@ -90,7 +92,7 @@
    &kp LG(V) &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O   &kp P    &kp LG(Z)
    &kp LG(X) &hrm LSHFT A &hrm LCTRL S &hrm LALT D &hrm LGUI F &kp G   &kp H &hrm RGUI J  &hrm RALT K  &hrm RCTRL L   &hrm RSHFT SEMI  &kp SQT
    &kp LG(C) &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &caps_word
-                  &lt 5 ESC &kp SPACE &lt 2 TAB   &lt 3 RET &kp BSPC &kp DEL
+                  &lt_mod 5 ESC &kp SPACE &lt_mod 2 TAB   &lt_mod 3 RET &kp BSPC &kp DEL
                         >;
                 };
 
@@ -104,7 +106,7 @@
    &kp LG(V) &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U  &kp Y   &kp SEMI   &kp LG(Z)
    &kp LG(X) &hrm LSHFT A &hrm LCTRL R &hrm LALT S &hrm LGUI T &kp G   &kp M &hrm RGUI N  &hrm RALT E  &hrm RCTRL I &hrm RSHFT O &kp SQT
    &kp LG(C) &kp X &kp C &kp D &kp V &kp Z   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &caps_word
-                  &lt 5 ESC &kp SPACE &lt 2 TAB   &lt 3 RET &kp BSPC &kp DEL
+                  &lt_mod 5 ESC &kp SPACE &lt_mod 2 TAB   &lt_mod 3 RET &kp BSPC &kp DEL
                         >;
                 };
 
