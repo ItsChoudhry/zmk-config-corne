@@ -41,8 +41,7 @@
               compatible = "zmk,behavior-hold-tap";
               #binding-cells = <2>;
               flavor = "tap-unless-interrupted";
-              tapping-term-ms = <180>;
-              require-prior-idle-ms = <100>;
+              tapping-term-ms = <185>;
               quick-tap-ms = <0>;
               retro-tap;
               bindings = <&kp &kp>; 
