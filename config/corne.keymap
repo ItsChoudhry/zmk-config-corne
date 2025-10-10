@@ -111,13 +111,13 @@
 
                   lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  .  |  $  |  `  |  -  |  /  |   |  *  |  #  |  [  |  ]  |  ,  |      |
+// |  met |  .  |  $  |  `  |  -  |  /  |   |  *  |  #  |  [  |  ]  |  ,  |      |
 // |  <   |  %  |  !  |  "  |  ~  | "|" |   |  &  |  =  |  (  |  )  |  ^  |  >   |
 // |  sh  |  :  |  ?  |  '  |  _  |  \  |   |  @  |  +  |  {  |  }  |  ;  |      |
 //                   | alt  |  cr |     |   |     |     |     |   
 // -----------------------------------------------------------------------------------------
     bindings = <
-  &trans   &kp DOT    &kp DLLR   &kp GRAVE   &kp MINUS   &kp FSLH        &kp STAR   &kp HASH   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp COMMA   &trans
+  &sk LGUI &kp DOT    &kp DLLR   &kp GRAVE   &kp MINUS   &kp FSLH        &kp STAR   &kp HASH   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp COMMA   &trans
   &kp LT   &kp PRCNT  &kp EXCL    &kp DQT     &kp TILDE  &kp PIPE        &kp AMPS  &kp EQUAL  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp CARET &kp GT
   &sk LSHFT   &kp COLON  &kp QMARK  &kp SQT     &kp UNDERSCORE &kp BSLH      &kp AT     &kp PLUS   &kp LEFT_BRACE     &kp RIGHT_BRACE     &kp SEMI   &trans
              &sk LALT   &sk LCTRL &trans       &trans  &trans &trans
