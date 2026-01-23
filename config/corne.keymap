@@ -34,17 +34,14 @@
 };
 
 / {
-      macros {
-          vim_wq: vim_wq {
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings =
-                  <&kp COLON>
-                  <&kp W>
-                  <&kp Q>
-                  <&kp ENTER>;
-          };
-      };
+    macros {
+        vim_wq: vim_wq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp W &kp Q &kp ENTER>;
+        };
+    };
+
         conditional_layers {
         compatible = "zmk,conditional-layers";
         funmedia_layer {
