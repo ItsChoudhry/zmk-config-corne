@@ -34,6 +34,17 @@
 };
 
 / {
+      macros {
+          vim_wq: vim_wq {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings =
+                  <&kp COLON>
+                  <&kp W>
+                  <&kp Q>
+                  <&kp ENTER>;
+          };
+      };
         conditional_layers {
         compatible = "zmk,conditional-layers";
         funmedia_layer {
@@ -47,16 +58,16 @@
 
 default_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | DEL |
+// | qw   |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | DEL |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '  |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | GUI |
-//                    | ALT | SPC | 1   |   | 2RET| ESC | BSPC |
+//                    | ALT | SPC | 1TAB|   | 2RET| ESC | BSPC |
 //
             bindings = < 
-   &kp TAB &kp Q  &kp W  &kp E  &kp R      &kp T      &kp Y  &kp U  &kp I      &kp O    &kp P     &kp DEL
+   &vim_wq &kp Q  &kp W  &kp E  &kp R      &kp T      &kp Y  &kp U  &kp I      &kp O    &kp P     &kp DEL
    &kp LCTRL &kp A  &kp S  &kp D  &kp F      &kp G      &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
    &kp LSHFT &kp Z  &kp X  &kp C  &kp V      &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
-                           &kp LALT &kp SPACE &mo 1   &lt 2 RET  &kp ESC &kp BSPC
+                           &kp LALT &kp SPACE &kp 1 TAB   &lt 2 RET  &kp ESC &kp BSPC
             >;
         };
                 lower_layer {
