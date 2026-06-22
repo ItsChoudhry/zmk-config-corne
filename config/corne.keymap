@@ -88,18 +88,17 @@ default_layer {
                             &kp N0  &trans  &trans      &trans    &trans     &trans
                         >;
                 };
-
         sym_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  %  |  $  |  `  |  ^  |  |  |   |  &  |  [  |  (  |  {  |  <  | caps |
-// |      |  :  |  !  |  "  |  ~  |  /  |   |  @  |  ]  |  )  |  }  |  >  | PSCN |
-// |      |  ;  |  ?  |  '  |  _  |  \  |   |  #  |  -  | ::  | ->  |  =  |      |
+// |      |  %  |  $  |  `  |  *  |  |  |   |  &  |  ~  |  [  |  ]  |  ^  | caps |
+// |      |  :  |  !  |  "  |  _  |  /  |   |  @  |  =  |  (  |  )  |  >  | PSCN |
+// |      |  ;  |  ?  |  '  |  +  |  \  |   |  #  |  -  |  {  |  }  |  <  |      |
 //                    |     |     |     |   |     | ___ |     |
 //
-            bindings = < 
-  &trans &kp PRCNT &kp DLLR  &kp GRAVE &kp CARET &kp PIPE        &kp AMPS &kp LBKT  &kp LPAR   &kp LBRC   &kp LT    &caps_word
-  &trans &kp COLON &kp EXCL  &kp DQT   &kp TILDE &kp FSLH        &kp AT   &kp RBKT  &kp RPAR   &kp RBRC   &kp GT    &kp PSCRN
-  &trans &kp SEMI  &kp QMARK &kp SQT   &kp UNDER &kp BSLH        &kp HASH &kp MINUS &cpp_scope &cpp_arrow &kp EQUAL &trans
+            bindings = <
+  &trans &kp PRCNT &kp DLLR  &kp GRAVE &kp STAR  &kp PIPE       &kp AMPS &kp TILDE &kp LBKT &kp RBKT &kp CARET &caps_word
+  &trans &kp COLON &kp EXCL  &kp DQT   &kp UNDER &kp FSLH       &kp AT   &kp EQUAL &kp LPAR &kp RPAR &kp GT    &kp PSCRN
+  &trans &kp SEMI  &kp QMARK &kp SQT   &kp PLUS  &kp BSLH       &kp HASH &kp MINUS &kp LBRC &kp RBRC &kp LT    &trans
                                  &trans    &trans   &trans     &trans &trans   &trans
             >;
         };
